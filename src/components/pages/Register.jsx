@@ -7,7 +7,7 @@ import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { collection, onSnapshot } from 'firebase/firestore';
 
 export default function Register() {
-  const [confirmData, setConfirmData] = useState();
+  // const [confirmData, setConfirmData] = useState();
   const [step, setStep] = useState(1);
   const [userInfo, setUserInfo] = useState({
     name: '',

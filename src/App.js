@@ -18,6 +18,7 @@ import FriendRequests from './components/Dashboard/Header/Navigation/FriendReque
 import Notes from './components/Dashboard/Header/Navigation/Notes';
 import Favorites from './components/Dashboard/Header/Navigation/Favorites';
 import Inbox from './components/Dashboard/Header/Navigation/Inbox';
+import Signout from './components/Signout';
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/signout" element={<Signout />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="/dashboard" element={<Users />} />

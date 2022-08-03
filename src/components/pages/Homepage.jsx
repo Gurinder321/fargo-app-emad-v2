@@ -4,18 +4,37 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase.config';
 
 const Homepage = () => {
-  const getData = async () => {
-    const querySnapshot = await getDocs(collection(db, 'users'));
-    console.log(querySnapshot);
+  // const getData = async () => {
+  //   const querySnapshot = await getDocs(collection(db, 'users'));
+  //   console.log(querySnapshot);
 
-    querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
-    });
-  };
+  //   querySnapshot.forEach((doc) => {
+  //     console.log(`${doc.id} => ${doc.data()}`);
+  //   });
+  // };
   return (
     <Layout>
       <h1>Homepage</h1>
-      <button onClick={getData}>Submit</button>
+      {/* Hero Header */}
+      <div
+        className="hero min-h-screen"
+        style={{ backgroundImage: 'url(https://placeimg.com/1000/800/arch)' }}
+      >
+        <div className="hero-overlay bg-opacity-60" />
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <p className="mb-5">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+              exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      {/* Second section */}
+      {/* <button onClick={getData}>Submit</button> */}
     </Layout>
   );
 };
